@@ -2,17 +2,32 @@
 
 ?>
 
-<!DOCTYPE html>
-<header>
-    <title>My Website</title>
-</header>
+	<head>
+<title>Undangan...</title>
+	</head>
+<body><center>
+<h1>Undangan Kepada Hadirin</h1>
+<p>Untuk Datang</p><hr><hr><hr>
+<h2><b>Resepsi <br><br> Nabil<br><br> &<br><br> Titik<br><br></b></h2></hr><hr><hr><hr>
 
-<body>
-<h1>Welcome to My Website</h1>
-<p>This is the homepage of my website.</p>
+<center><p><b>
+<p>Yang Dilaksanakan Pada :</p>
+<li>Lokasi Jl. Yang Benar</li>
+<li>Waktu Sebelum Masehi</li><br>
+</b></center>
+<br><hr>
+
+<p align="justify">Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.<br.
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+</p><br><hr>
+
+<p><b>Ditunggu Kehadirannya, Terima Kasih</b></p>
+</center>
+
 </body>
-
 <footer>
-    <hr>
-    <p>&copy; 2026 My Website</p>
+<hr>
+<center><a href ="https://ft.unri.ac.id" target="blank"><p>Map Lokasi</p></a></center>
+<i>test 2026</i>
 </footer>
