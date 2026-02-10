@@ -1,0 +1,56 @@
+p::first-line {
+    background-color: greenyellow;
+    
+}
+
+h3 {
+    text-align: center;
+    background-color: aqua ;
+    max-width: fit-content;
+    margin: 10px auto;
+    padding: 0.2em 0.5em;}
+
+p {
+    padding: 0.5em;
+    text-align: justify;
+}
+
+.pertama {
+     outline: auto;
+    outline-width: 0.1em;
+    outline-style: inset;
+    outline-padding: 0.2em;
+    outline-color: red;
+}
+
+.teks-kuning {
+    background-color: yellow ;
+    max-width: fit-content;
+}
+
+.teks-miring {
+    font-style: italic;
+    font-style: underline;
+}
+
+.teks-biru {
+    color: blue;
+    font-weight: bold;
+}
+
+ol {
+    text-decoration: underline;
+    font-style: italic;
+    font-weight: bold;
+}
+
+li {
+    margin-bottom: 0.3em;
+    background-color: yellow ;
+    max-width: fit-content;
+}
+
+table, th, td {
+    color: red;
+    border: 1px solid black;    
+}
