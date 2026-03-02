@@ -74,11 +74,22 @@ h1.mempelai-names {
 
 p{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.7rem;
 }
 
 /* Couple Detail */
 .couple-info {
     margin: 25px 0;
+}
+
+.timer {
+    font-size: 1.2rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #8a6d3b;
+    margin-bottom: 20px;
+    padding: 40px;
+    background-color: #fcf9f2;
+    border-radius: 10px;
 }
 
 .person h3 {
@@ -96,7 +107,7 @@ p{
 
 .quote {
     font-style: italic;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     padding: 0 20px;
     margin: 15px 0;
     color: #777;
@@ -167,13 +178,14 @@ p{
 .rsvp-title {
     color: #8a6d3b;
     margin-bottom: 15px;
+    font-size: 1.0rem;
 }
 ol {
     text-align: left;
     color: #555;
     background-color: #fcf9f2;
     padding-left: 130px;
-    
+    font-size: 0.7rem;
 }
 a {
     color: #8a6d3b;
