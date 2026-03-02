@@ -61,14 +61,14 @@
                 </div>
             </div>
             
-            <div id="timer" class="timer">
+            <div id="timer" class="card">
               <span id="days">00</span> Hari 
               <span id="hours">00</span> Jam 
               <span id="minutes">00</span> Menit 
               <span id="seconds">00</span> Detik
             </div>
 
-            <div class="location-box">
+            <div class="guest-box">
                 <p><strong>Lokasi:</strong></p>
                 <p>Gedung Serba Guna Fakultas Teknik UNRI</p>
                 <p>Pekanbaru, Riau</p>
@@ -85,20 +85,21 @@
 
         <footer class="footer-section">
             <p>Merupakan suatu kehormatan bagi kami atas kehadiran doa restu Anda.</p>
-            <p class="closing">Terima Kasih</p>
             
             <div class="map-wrapper">
                 <!-- <a href="https://ft.unri.ac.id" target="_blank" class="btn-map">📍 Lihat Lokasi di Map</a> -->
                 <!-- <p>Link Map</p> -->
                 <a href="https://www.google.com/maps/place/Gedung+Serba+Guna+Fakultas+Teknik+UNRI/@0.507,101.447,17z/data=!3m1!4b1!4m5!3m4!1s0x31d5a9c8e7b8e7f:0x2c9b8e5f6a7c8e9!8m2!3d0.507!4d101.449" target="_blank">📍 Lihat Lokasi di Map</a>
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15958.721745434252!2d101.37060591928329!3d0.4763423923358567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1772436928156!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
-            <form class="rsvp-form">
-                <h2 class="rsvp-title">Konfirmasi Kehadiran</h2>
-                <input type="text" name="name" placeholder="Nama Anda" required class="input-field">
-                <button type="submit" class="btn-submit">Kirim</button>
-            </form>
-            <p class="copyright">© 2026 Nabil </p>
+        <form class="rsvp-form" id="rsvp-form">
+            <h2 class="rsvp-title">Konfirmasi Kehadiran</h2>
+            <input type="text" id="name" name="name" placeholder="Nama Anda" required class="input-field">
+            <button type="submit" class="btn-submit">Kirim</button>
+        </form>
+
+<p class="copyright">© 2026 Nabil</p>
         </footer>
     </div>
 </body>

@@ -18,3 +18,13 @@ const countdownTimer = {
 setInterval(() => {
     countdownTimer.update();
 }, 1000);
+
+
+const rsvpForm = document.querySelector(".rsvp-form");
+  rsvpForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value;
+    alert(`Terima kasih, ${name}!.`);
+    rsvpForm.reset();
+  });
+
