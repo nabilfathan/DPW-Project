@@ -1,107 +1,170 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wedding of Nabil & Titik</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="script.js" defer></script>
-    <title>Undangan Pernikahan: Nabil & Titik</title>
 </head>
-
 <body>
+
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="subtitle fade-in">THE WEDDING OF</p>
+            <h1 class="mempelai-names fade-in">Nabil & Titik</h1>
+            <div class="line-gold fade-in"></div>
+            
+            <div class="guest-box-luxury fade-in">
+                <p>Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+                <h2 class="guest-name">Nama Tamu</h2>
+                <button class="btn-gold" onclick="scrollToContent()">Buka Undangan</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="card-section glass" id="pembuka">
+        <p class="greeting">Assalamu’alaikum Wr. Wb.</p>
+        <p class="intro-text">Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud mengundang Anda untuk merayakan momentum suci pernikahan kami.</p>
+        
+        <div class="quote-box-luxury">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <p>"Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya..."</p>
+            <span class="quote-author">(QS. Ar-Rum: 21)</span>
+        </div>
+        
+        <div class="line-gold-small"></div>
+    </section>
+
+    <section class="card-section glass" id="mempelai">
+        <h2 class="section-title">Pasangan Mempelai</h2>
+        
+        <div class="couple-container">
+            <div class="person-card">
+                <div class="profile-frame">
+                    <div class="profile-placeholder"><i class="fas fa-user-circle fa-4x"></i></div>
+                </div>
+                <h3>Nabil [Nama Lengkap]</h3>
+                <p class="parent-info">Putra dari Bapak Fulan & Ibu Fulanah</p>
+            </div>
+            
+            <div class="ampersand-luxury">&</div>
+            
+            <div class="person-card">
+                <div class="profile-frame">
+                    <div class="profile-placeholder"><i class="fas fa-user-circle fa-4x"></i></div>
+                </div>
+                <h3>Titik [Nama Lengkap]</h3>
+                <p class="parent-info">Putri dari Bapak Fulan & Ibu Fulanah</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="card-section glass" id="acara">
+        <h2 class="section-title">Waktu & Acara</h2>
+        
+        <p class="event-subtitle">Merayakan momentum suci pada:</p>
+        
+        <div class="event-grid-luxury">
+            <div class="event-card-item">
+                <div class="icon-wrap"><i class="fas fa-ring fa-2x"></i></div>
+                <h4>Akad Nikah</h4>
+                <p class="event-date">Sabtu, 20 Juli 2024</p>
+                <p class="event-time">08.00 - 10.00 WIB</p>
+                <div class="info-tag-gold">Hanya Keluarga</div>
+            </div>
+            
+            <div class="event-card-item">
+                <div class="icon-wrap"><i class="fas fa-glass-cheers fa-2x"></i></div>
+                <h4>Resepsi</h4>
+                <p class="event-date">Sabtu, 20 Juli 2024</p>
+                <p class="event-time">10.00 WIB - Selesai</p>
+                <div class="info-tag-gold">Terbuka</div>
+            </div>
+        </div>
+        
+        <div class="countdown-container" id="countdownTimer">
+            <p class="label-gold">Menuju Hari Bahagia</p>
+            <div id="timer" class="luxury-countdown">
+                <div class="time-unit"><span id="days">00</span><p>Hari</p></div>
+                <div class="time-unit"><span id="hours">00</span><p>Jam</p></div>
+                <div class="time-unit"><span id="minutes">00</span><p>Menit</p></div>
+                <div class="time-unit"><span id="seconds">00</span><p>Detik</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="card-section glass" id="lokasi">
+        <h2 class="section-title">Lokasi Presisi</h2>
+        
+        <div class="location-luxury-box">
+            <i class="fas fa-map-marked-alt fa-3x icon-gold-flat"></i>
+            <p class="label-gold-label">TEMPAT ACARA</p>
+            <h3>Gedung Serba Guna Fakultas Teknik UNRI</h3>
+            <p>Kampus Binawidya, Panam, Pekanbaru, Riau</p>
+        </div>
+        
+        <div class="map-wrapper-luxury">
+            <iframe class="map-iframe-glass" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15958.721745434252!2d101.37060591928329!3d0.4763423923358567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1772436928156!5m2!1sen!2sid" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        
+        <a href="https://www.google.com/maps/place/Gedung+Serba+Guna+Fakultas+Teknik+UNRI/@0.507,101.447,17z/data=!3m1!4b1!4m5!3m4!1s0x31d5a9c8e7b8e7f:0x2c9b8e5f6a7c8e9!8m2!3d0.507!4d101.449" target="_blank" class="btn-map-gold-luxury">📍 Buka Google Maps</a>
+    </section>
+
+    <section class="card-section glass" id="dresscode">
+        <h2 class="section-title">Dresscode</h2>
+        
+        <div class="dresscode-luxury-box">
+            <i class="fas fa-tshirt fa-3x icon-gold-flat"></i>
+            <p class="label-gold-label">PAKAIAN TAMU</p>
+            <h3>Formal & Elegant</h3>
+            <div class="dresscode-flex-tags">
+                <span class="tag-luxury">Batik</span>
+                <span class="tag-luxury">Jas</span>
+                <span class="tag-luxury">Gaun Malam</span>
+            </div>
+            <p class="hint-text">Disarankan menggunakan warna Netral atau Pastel.</p>
+        </div>
+    </section>
+
+    <section class="card-section glass" id="penutup">
+        <div class="closing-luxury">
+            <p>Wassalamu’alaikum Wr. Wb.</p>
+            <p class="closing-text">Merupakan suatu kehormatan bagi kami atas kehadiran doa restu Anda.</p>
+            <h1 class="mempelai-names-small">Nabil & Titik</h1>
+        </div>
+
+        <section id="rsvp" class="rsvp-section">
     <div class="container">
-        <section class="hero-section">
-            <p class="subtitle">THE WELDING OF</p>
-            <div class="image-wrapper">
-                <img src="asset/download.jpg" alt="Foto Nabil dan Titik" class="main-photo">
-            </div>
-            <h1 class="mempelai-names">Nabil - Titik</h1>
-            <hr class="divider">
-        </section>
-
-        <section class="guest-section">
-            <p>Kepada Yth. Bapak/Ibu/Saudara/i:</p>
-            <div class="guest-box">
-                <h2 class="guest-name">Nama Tamu Undangan</h2>
-            </div>
-            <p>Kami mengundang Anda untuk merayakan hari bahagia kami.</p>
-        </section>
-  
-        <section class="mempelai-detail">
-            <p class="greeting">Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
-            <p class="quote">
-                "Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan merasa tenteram kepadanya."
-            </p>
-            
-            <div class="couple-info">
-                <div class="person">
-                    <h3 class="name">Nabil </h3>
-                    <p>Putra dari Bapak Fulan & Ibu Fulanah</p>
-                </div>
-                <span class="ampersand">-</span>
-                <div class="person">
-                    <h3 class="name">Titik .</h3>
-                    <p>Putri dari Bapak Fulan & Ibu Fulanah</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="event-section">
-            <hr class="divider">
-            <p class="event-title">Acara akan dilaksanakan pada:</p>
-            <div class="event-cards">
-                <div class="card">
-                    <img src="https://img.icons8.com/ios-filled/50/8a6d3b/calendar--v1.png" alt="Icon Kalender" />
-                    <p class="card-text">Sabtu, 20 Juli 2024</p>
-                </div>
-                <div class="card">
-                    <img src="https://img.icons8.com/ios-filled/50/8a6d3b/clock--v1.png" alt="Icon Jam" />
-                    <p class="card-text">10.00 WIB - Selesai</p>
-                </div>
-            </div>
-            
-            <div id="timer" class="card">
-              <span id="days">00</span> Hari 
-              <span id="hours">00</span> Jam 
-              <span id="minutes">00</span> Menit 
-              <span id="seconds">00</span> Detik
-            </div>
-
-            <div class="guest-box">
-                <p><strong>Lokasi:</strong></p>
-                <p>Gedung Serba Guna Fakultas Teknik UNRI</p>
-                <p>Pekanbaru, Riau</p>
-            </div>
-
-            <div class="guest-box">
-                <h2 class="rsvp-title">Dresscode</h2>
-                <ol>
-                    <li>Formal</li>
-                    <li>Warna netral atau pastel</li>
-                </ol>
-            </div>
-        </section>
-
-        <footer class="footer-section">
-            <p>Merupakan suatu kehormatan bagi kami atas kehadiran doa restu Anda.</p>
-            
-            <div class="map-wrapper">
-                <!-- <a href="https://ft.unri.ac.id" target="_blank" class="btn-map">📍 Lihat Lokasi di Map</a> -->
-                <!-- <p>Link Map</p> -->
-                <a href="https://www.google.com/maps/place/Gedung+Serba+Guna+Fakultas+Teknik+UNRI/@0.507,101.447,17z/data=!3m1!4b1!4m5!3m4!1s0x31d5a9c8e7b8e7f:0x2c9b8e5f6a7c8e9!8m2!3d0.507!4d101.449" target="_blank">📍 Lihat Lokasi di Map</a>
-                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15958.721745434252!2d101.37060591928329!3d0.4763423923358567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1772436928156!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-
-        <form class="rsvp-form" id="rsvp-form">
-            <h2 class="rsvp-title">Konfirmasi Kehadiran</h2>
-            <input type="text" id="name" name="name" placeholder="Nama Anda" required class="input-field">
-            <button type="submit" class="btn-submit">Kirim</button>
-        </form>
-
-<p class="copyright">© 2026 Nabil</p>
-        </footer>
+        <h2 class="label-gold">Konfirmasi Kehadiran</h2>
+        <p>Mohon isi formulir di bawah ini untuk konfirmasi kehadiran Anda.</p>
     </div>
-</body>
+        
+        <form class="rsvp-form">
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Nama Lengkap" required>
+            </div>
+            <div class="form-group">
+                <select id="status" name="status" required>
+                    <option value="" disabled selected>Konfirmasi Kehadiran</option>
+                    <option value="hadir">Hadir</option>
+                    <option value="tidak-hadir">Tidak Hadir</option>
+                </select>
+            </div>
+            <button type="submit" class="btn-submit">Kirim Konfirmasi</button>
+        </form>
+</section>
+        
+        <p class="copyright">© 2026 Nabil & Titik Wedding. All rights reserved.</p>
+    </section>
 
+   
+</body>
 </html>

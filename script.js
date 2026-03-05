@@ -1,5 +1,5 @@
 const countdownTimer = {
-    targetDate: new Date("Feb 29, 2090 10:00:00").getTime(),
+    targetDate: new Date("Feb 28, 2090 10:00:00").getTime(),
 
     update: function() {
         const now = new Date().getTime();
@@ -14,17 +14,45 @@ const countdownTimer = {
         document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0'); 
     }
 }
+document.addEventListener('DOMContentLoaded', () => {
+
+    countdownTimer.update();
 
 setInterval(() => {
     countdownTimer.update();
 }, 1000);
+});
 
+document.addEventListener("DOMContentLoaded", function() {
+    const rsvpForm = document.querySelector(".rsvp-form");
 
-const rsvpForm = document.querySelector(".rsvp-form");
-  rsvpForm.addEventListener("submit", function(event) {
-    event.preventDefault();
-    const name = document.getElementById("name").value;
-    alert(`Terima kasih, ${name}!.`);
-    rsvpForm.reset();
-  });
+    // Cek dulu apakah form-nya beneran ada di HTML
+    if (rsvpForm) {
+        rsvpForm.addEventListener("submit", function(event) {
+            // 1. Stop form biar nggak refresh halaman
+            event.preventDefault();
 
+            // 2. Ambil nilai input nama
+            const nameInput = document.getElementById("name");
+            const name = nameInput ? nameInput.value : "Tamu";
+
+            // 3. Tampilkan pesan
+            Swal.fire({
+            title: 'Terima Kasih!',
+            text: `Konfirmasi kehadiran ${name} telah kami terima.`,
+            icon: 'success',
+            confirmButtonColor: '#d4af37' // Warna gold sesuai tema lo
+        });
+            // 4. Reset form setelah sukses
+            rsvpForm.reset();
+        });
+    } else {
+        console.error("Form dengan class .rsvp-form tidak ditemukan!");
+    }
+});
+
+ function scrollToContent() {
+            document.getElementById('pembuka').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
