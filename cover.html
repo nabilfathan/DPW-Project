@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation | Nabil & Titik</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Reset & Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body, html { 
+            height: 100%;
+            font-family: 'Poppins', sans-serif; 
+            background-color: #1a1a1a; /* Warna cadangan sebelum gambar load */
+        }
+
+        .hero-section {
+            position: relative;
+            min-height: 100vh; /* Menggunakan min-height agar bisa memanjang jika konten banyak */
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('asset/bg-wedding.jpg') no-repeat center center/cover;
+            background-attachment: fixed; /* Membuat efek parallax simple agar lebih berbobot */
+            padding: 40px 20px; /* Memberi ruang agar kartu tidak nempel ke pinggir layar */
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.8));   
+            z-index: 1;
+        }
+
+        .container-cover {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 500px; /* Sedikit dipersempit agar lebih elegan di layar lebar */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Mempelai Names */
+        .hero-content {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 30px;
+        }
+
+        .wedding-announcement {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 5px;
+            font-size: 0.8rem;
+            margin-bottom: 10px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .mempelai-names {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(3rem, 10vw, 4.5rem); /* Ukuran font dinamis agar tidak pecah/terpotong */
+            margin-bottom: 10px;
+            color: #f1c40f; /* Sentuhan warna emas */
+            text-shadow: 2px 4px 8px rgba(0,0,0,0.5);
+        }
+
+        .line-gold {
+            height: 1.5px;
+            width: 60%;
+            max-width: 200px;
+            background: linear-gradient(to right, transparent, #d4af37, transparent);
+            margin: 15px auto;
+        }
+
+        /* Glassmorphism Card */
+        .card-section {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 25px;
+            padding: 35px 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            color: white;
+        }
+
+        .special-greeting {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .greeting {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .line-gold-small {
+            height: 1px;
+            width: 50px;
+            background: #d4af37;
+            margin: 0 auto 20px;
+        }
+
+        .intro-text {
+            font-size: 0.85rem;
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        /* Button Styling */
+        .btn-open {
+            background: linear-gradient(45deg, #d4af37, #f1c40f);
+            color: #1a1a1a;
+            border: none;
+            padding: 14px 40px;
+            border-radius: 50px;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
+            text-decoration: none;
+        }
+
+        .btn-open:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 25px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Animations */
+        .fade-in { opacity: 0; animation: fadeIn 2s ease forwards; }
+        .fade-in-up { opacity: 0; animation: fadeInUp 1.5s ease-out forwards; animation-delay: 0.5s; }
+
+        @keyframes fadeIn { to { opacity: 1; } }
+        @keyframes fadeInUp { 
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Landscape Mobile Fix */
+        @media (max-height: 500px) {
+            .hero-section { padding: 20px; }
+            .mempelai-names { font-size: 2.5rem; }
+            .card-section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        
+        <div class="container-cover">
+            <div class="hero-content">
+                <p class="wedding-announcement fade-in">THE WEDDING OF</p>
+                <h1 class="mempelai-names fade-in">Nabil & Titik</h1>
+                <div class="line-gold fade-in"></div>
+            </div>
+
+            <div class="card-section glass fade-in-up">
+                <p class="special-greeting">Kepada Bapak/Ibu/Saudara/i,</p>
+                <h2 class="greeting">Kami Mengundang Anda untuk Menghadiri Hari Bahagia Kami</h2>
+                
+                <div class="line-gold-small"></div>
+                
+                <p class="intro-text">
+                    Merupakan suatu kehormatan dan kebahagiaan bagi kami jika Bapak/Ibu/Saudara/i berkenan hadir memberikan doa restu.
+                </p>
+
+                <a href="index.html" class="btn-open">
+                    <i class="fas fa-envelope-open-text"></i> BUKA UNDANGAN
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

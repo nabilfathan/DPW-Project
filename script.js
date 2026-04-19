@@ -56,3 +56,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 behavior: 'smooth' 
             });
         }
+
+function toggleMusic() {
+    const audio = document.getElementById('background-music');{
+        audio.src = "asset/Kahitna Feat. Monita Tahalea - Titik Nadir (Official Music Video) [OQNu-iB2tE8].mp3";
+        audio.play();
+        }
+}
